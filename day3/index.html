@@ -100,9 +100,28 @@
             </section>
 
             <section>
-                Gaze Controls and Cursor component
+                To get started with interactivity we can add a gazed based cursor. To do this we override the default camera by adding our own.
+                Then we add a entity with the cursor componet with a -1 on the z axis so it places it in front of the camera.<br>
+                <a href="https://aframe.io/docs/1.0.0/components/cursor.html">Cursor Documentation</a>
+                Let's look at c.html
             </section>
 
+            <section>
+                We are also using the <a href="https://github.com/supermedium/superframe/tree/master/components/event-set/">Event Set Component</a> to respond to cursor events.
+                Let's look at c1.html
+            </section>
+
+            <section>
+                <a href="https://aframe.io/docs/1.0.0/components/animation.html">Animation</a> has a startEvents property that listens for .
+                Let's look at c2.html
+            </section>
+
+            <section>
+                The <a href="https://aframe.io/docs/1.0.0/components/cursor.html">Cursor Documentation</a> acts like a mouse and uses mouse events. 
+                Other VR controllers offer differnt events. Have Quick read on:
+                <a href="https://aframe.io/docs/1.0.0/introduction/interactions-and-controllers.html">Interaction and Controllers</a>
+                We will have a prt 2 on interaction next week.
+            </section>
 
             <section>
                 <ul>
@@ -197,14 +216,14 @@
             <section>
                 <ul>
                     <li>Default functions of a component</li>
-                    <li>Inside the template folder, look at the file mycomponent.js</li>
+                    <li>Inside the comp_template folder, look at the file mycomponent.js</li>
                     <li>This is a boilerplate that show all the built in functions that a-frame gives us</li>
-                    <li>We will mainly use the init() which is called once when the component is first plugged into its
+                    <li>Today we will start with init() which is called once when the component is first plugged into its
                         entity.</li>
                 </ul>
             </section>
             <section>
-                    <li><a href="https://aframe.io/docs/0.9.0/introduction/writing-a-component.html">writing a component reference</a>
+                    <li><a href="https://aframe.io/docs/1.0.0/introduction/writing-a-component.html">writing a component reference</a>
                     </li>
                     
             </section>
@@ -232,7 +251,7 @@
             <section>
                 <ul>
                     <li>Lets look at the Component API reference to see the schema type available</li>
-                    <li><a href="https://aframe.io/docs/0.9.0/core/component.html">Aframe component API reference</a>
+                    <li><a href="https://aframe.io/docs/1.0.0/core/component.html">Aframe component API reference</a>
                     </li>
                 </ul>
             </section>
