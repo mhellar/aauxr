@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <a-scene>
     <!-- <a-scene physics="debug: true; gravity: -9.8"> -->
 
@@ -28,6 +29,10 @@
     <a-sphere position="0 3 -3" radius="1.25" scale=".5 .5 .5" color="#EF2D5E" dynamic-body></a-sphere>
     <a-cylinder position="2 3 -3" radius="0.5"  scale=".5 .5 .5" height="1.5" color="#FFC65D" dynamic-body></a-cylinder> -->
 
+    <!-- <a-box position="-2 3 -3" rotation="0 45 0" scale=".5 .5 .5" color="#4CC3D9" dynamic-body="linearDamping: -5; angularDamping:.001"></a-box>
+    <a-sphere position="0 3 -3" radius="1.25" scale=".5 .5 .5" color="#EF2D5E" dynamic-body></a-sphere>
+    <a-cylinder position="2 3 -3" radius="0.5"  scale=".5 .5 .5" height="1.5" color="#FFC65D" dynamic-body></a-cylinder>  -->
+
     <!-- <a-box position="-2 3 -3" rotation="0 45 0" scale=".5 .5 .5" color="#4CC3D9" dynamic-body></a-box>
     <a-sphere position="0 3 -3" radius="1.25" scale=".5 .5 .5" color="#EF2D5E" dynamic-body></a-sphere>
     <a-cylinder position="2 3 -3" radius="0.5"  scale=".5 .5 .5" height="1.5" color="#FFC65D" dynamic-body></a-cylinder> -->
@@ -38,7 +43,7 @@
 
     <a-box id="ground" width=1000 height=0.001 depth=1000 visible="true"></a-box>
 
-    <!-- <a-box id="ground" static-body width=1000 height=0.001 depth=1000 visible="true"></a-box> -->
+    <a-box id="ground" static-body width=1000 height=0.001 depth=1000 visible="true"></a-box>
 
     </a-scene>
 </body>
