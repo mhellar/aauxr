@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>WebXR: Day 4</title>
+    <title>WebXR: Day 5</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport"
@@ -32,97 +32,99 @@
             <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
                 data-background-size="100px" data-background-transition="zoom">
                 <figure>
-                    <h2 class="intro">WebXR: Day 4</h2 class="intro">
-                    <h2 class="intro">WebXR: Day 4</h2 class="intro">
-                    <h2 class="intro">WebXR: Day 4</h2 class="intro">
-                    <h2 class="intro">WebXR: Day 4</h2 class="intro">
+                    <h2 class="intro">WebXR: Day 5</h2 class="intro">
+                    <h2 class="intro">WebXR: Day 5</h2 class="intro">
+                    <h2 class="intro">WebXR: Day 5</h2 class="intro">
+                    <h2 class="intro">WebXR: Day 5</h2 class="intro">
                 </figure>
             </section>
             <section>
                 <a href="https://bit.ly/2VspsCS">Code Download</a>
             </section>
             <section>
-                Kinect and Depthkit
+                <a href="https://bit.ly/2VspsCS">3D files Download</a>
             </section>
 
             <section>
-                <a href="https://bit.ly/2Pqk5zW">Depthkit Template Download</a>
+                Creating an animated character with Maya and Mixamo
+                <img src="img/mixamo.jpg" height="300">
+            </section>
+            <section>
+                First create an account at https://www.mixamo.com
+            </section>
+            <section>
+                Open Maya and create a cube, set the subdivisions w/h/d to 4
+                <img src="img/m1.jpg" height="300">
+            </section>
+            <section>
+                Right clich to select faces.
+                <img src="img/m2.jpg" height="300">
+            </section>
+            <section>
+                Use shift click to choose multiple faces
+                <img src="img/m3.jpg" height="300">
+            </section>
+            <section>
+                Use ctrl+e to extrude
+                <img src="img/m4.jpg" height="300">
+            </section>
+            <section>
+                Keep working the geometry to biuld out a figure in a t-pose
+                <img src="img/m5.jpg" height="300">
+            </section>
+            <section>
+                Hit the 3 key to do a smooth preview. The select Modify>Convert>Smooth Mesh Preview to Polygons to smooth the geometry
+                <img src="img/m6.jpg" height="300">
+            </section>
+            <section>
+                Export as a FBX file, Under FBX file format choose FBX 2013
+                <img src="img/m7.jpg" height="300">
+            </section>
+            <section>
+                Let's process it in Mixamo
+            </section>
+            <section>
+                Export the file from Mixamo and bring it back into Maya. Select Display>Animation>Joint Size
+                <img src="img/m8.jpg" height="300">
+            </section>
+            <section>
+                We can add other geometry and attach it to the joints by selecting the geometry and then the joing and hit 'P' to parent
+                <img src="img/m9.jpg" height="300">
+            </section>
+            <section>
+                Export as a FBX file, Under FBX file format choose FBX 2013
+                <img src="img/m7.jpg" height="300">
             </section>
 
             <section>
-                Interactivity part 1
-            </section>
-            <section>
-                To get started with interactivity we can add a gazed based cursor. To create a cursor we will create a
-                camera.
-                Then we add a entity with the cursor component with a -1 on the z axis so it places it in front of the
-                camera.<br>
-                <a href="https://aframe.io/docs/1.0.0/components/cursor.html">Cursor Documentation</a>
-                Let's look at c.html
+                Download the tool FBX2glTF-darwin-x64 is for OSX and move it yo your desktop. 
             </section>
 
             <section>
-                We can use the <a
-                    href="https://github.com/supermedium/superframe/tree/master/components/event-set/">Event Set
-                    Component</a> to respond to cursor events.
-                Let's look at c1.html
+                Due to OSX security we have to do a bit of set up. Right click it and choose open. It will show some junk just close it. 
             </section>
 
             <section>
-                The event-set component also has a _target: property which can affect onther object
-                Let's look at c1.html again
+                <ul>
+                    <li>Open the terminal</li>
+                    <li>type 'cd Desktop'</li>
+                    <li>next type 'sudo chmod +x FBX2glTF-darwin-x64'</li>
+                    <li>you only have to do this once, it make the program executable</li>
+                    <li>to convert the file type '/Users/mhellar/Desktop/FBX2glTF-darwin-x64 PATH TO YOUR FILE</li>
+                </ul>
             </section>
             <section>
-                <a href="https://aframe.io/docs/1.0.0/components/animation.html">Animation</a> has a startEvents
-                property that listens for on it's own.
-                Let's look at c2.html
-            </section>
-
-            <section>
-                The <a href="https://aframe.io/docs/1.0.0/components/cursor.html">Cursor</a> acts like a mouse and uses
-                mouse events which are listed in the documentation.
-                Other VR controllers offer different events.
-                <a href="https://aframe.io/docs/1.0.0/introduction/interactions-and-controllers.html">Interaction and
-                    Controllers</a>
+                <ul>
+                    <li>Let me demonstrate</li>
+                    <img src="img/m10.jpg" height="300">
+                </ul>
             </section>
             <section>
-                In checkpoint.html we combine the cursor with <a
-                    href="https://github.com/donmccurdy/aframe-extras/tree/master/src/controls">Checkpoint Controls</a>
-                for a movement system
+                There's a folder in the code called anim_template. Can you import your animation into it. I will come around and help.
             </section>
             <section>
-                <a href="https://github.com/donmccurdy/aframe-physics-system#basics">Physics</a>
-            </section>
-            <section>
-                Look at Phys1.html and we will look at a basic physics setup
-            </section>
-            <section>
-                Look at Phys2.html and Phys3.html
-            </section>
-            <section>
-                To make the last 2 scenes I used the <a href="https://github.com/supermedium/superframe/tree/master/components/randomizer">randomizer component</a> and the <a href="https://github.com/supermedium/superframe/tree/master/components/entity-generator/">entity generator component</a> 
-            </section>
-            <section>
-                I want to walk you through how to do this so lets start by reviewing <a href="https://aframe.io/docs/1.0.0/core/mixins.html#sidebar">Mixins</a> look at mix1.html
-            </section>
-
-            <section>
-                now lets look at entgen.html and walk through it
-            </section>
-            <section>
-                Now we can revisit Phys3.html and Phys2.html
-            </section>
-            <section>
-                Maya Basics
-            </section>
-            <section>
-                Painting with Substance painter
-            </section>
-
-            <section>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/a_GbI-au6v4" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                Blend Shapes
+                <img src="img/blend.jpg" height="300">
             </section>
 
             <section>
@@ -138,8 +140,6 @@
                 to an a-entity tag. Components are configurable, reusable, and shareable. Most code in an A-Frame
                 application should live within components.
             </section>
-
-
             <section>
                 You use the AFRAME.registerComponent() function to register a component, do this before
                 <a-scene></a-scene> Have a look at comp.html
