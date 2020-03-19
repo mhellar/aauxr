@@ -1,8 +1,6 @@
 <!-- include A-Frame obviously -->
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
 <!-- A-Frame extras for GLTF animations -->
-<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
-<!-- include ar.js for A-Frame -->
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
 <script>
@@ -45,20 +43,34 @@
 
         init: function () {
             for (let i = 1; i < this.data.amount; i++) {
-                var box = document.createElement('a-box');
+                let items = 32
+                let x = 2 * Math.sin(2 * Math.PI * i / items);
+                let y = 2 * Math.cos(2 * Math.PI * i / items);
+                let z = 2 * Math.sin(2 * Math.PI * i / items);
+
+                let box = document.createElement('a-entity');
+                box.setAttribute('gltf-model', 'models/head/scene.gltf');
                 box.setAttribute('color', this.getRandomColor());
-                box.setAttribute('position', '0 0 0');
+                box.setAttribute('position', x + ' ' + y + ' ' + z);
                 box.setAttribute('scale', this.getRandomInt(1, this.data.randScaleMax) + ' ' + this.getRandomInt(1, this.data.randScaleMax) + ' ' + this.getRandomInt(1, this.data.randScaleMax));
                 box.setAttribute('rotation', i + ' ' + i + ' ' + i);
                 box.setAttribute('radius', i);
                 box.setAttribute('metalness', 1);
 
-                var anim = document.createElement('a-animation');
-                anim.setAttribute('attribute', 'rotation');
-                anim.setAttribute('dur', '1000');
-                anim.setAttribute('to', i * 10 + ' ' + i * 10 + ' ' + i * 10);
-                anim.setAttribute('repeat', 'indefinite');
-                box.appendChild(anim)
+                box.setAttribute('animation__rotate', {
+                        property: 'rotation',
+                        to: this.getRandomInt(1, 720) + ' ' + this.getRandomInt(1, 720) + ' ' + this.getRandomInt(1, 720),
+                        easing: 'easeInOutBack',
+                        loop: 'true',
+                        dur: 50000
+                    });
+
+                    // box.setAttribute('animation__position', {
+                    //     property: 'position',
+                    //     to: this.getRandomInt(1, this.data.randScaleMax * 3) + ' ' + this.getRandomInt(1, this.data.randScaleMax * 3) + ' ' + this.getRandomInt(1, this.data.randScaleMax * 3),
+                    //     loop: 'true',
+                    //     dur: 100000
+                    // });
 
 
                 this.el.appendChild(box);
@@ -72,10 +84,9 @@
     <a-scene embedded arjs>
         <!-- Aframe asset system. preload assets here -->
         <!-- create your content here. just a box for now -->
-        <a-entity hello-world="amount:10;randScaleMax:3">
+        <a-light type="point" color="blue" position="0 5 0"></a-light>
+        <a-entity hello-world="amount:50;randScaleMax:8" position="0 2 -2.7">
         </a-entity>
-        <!-- define a camera which will move according to the marker position -->
-        <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
 </body>
 
