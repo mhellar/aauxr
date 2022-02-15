@@ -1,52 +1,27 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-    <title>Basic Interactions - A-Frame</title>
-    <meta name="description" content="Interactions - A-Frame">
-    <script src="js/aframe-master.min.js"></script>
-    <script src="js/aframe-event-set-component.min.js"></script>
+  <meta charset="utf-8">
+  <title>Hello, WebVR! • A-Frame</title>
+  <meta name="description" content="Hello, WebVR! • A-Frame">
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
 </head>
 
 <body>
-    <a-scene>
-        <a-assets>
-            <img id="gndTexture" src="assets/img/grid.jpg">
-        </a-assets>
-
-        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336" event-set__enter="_event: mouseenter; _target: #bg; color: #F44336"
-            sound="src: assets/sound/sound9.mp3; on: mouseenter">
-            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
-            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
-        </a-box>
-        <a-box position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#2196F3 " event-set__enter="_event:
-            mouseenter; _target: #bg; color: #2196F3" sound="src: assets/sound/sound20.mp3; on: mouseenter">
-            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
-            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
-        </a-box>
-        <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#009688 " event-set__enter="_event:
-            mouseenter; _target: #bg; color: #009688" sound="src: assets/sound/sound24.mp3; on: mouseenter">
-            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
-            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
-        </a-box>
-        <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#E91E63 " event-set__enter="_event: mouseenter;
-            _target: #bg; color: #E91E63" sound="src: assets/sound/sound27.mp3; on: mouseenter">
-            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
-            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
-        </a-box>
-
-        <a-entity laser-controls="hand: left "></a-entity>
-        <a-entity laser-controls="hand: right "></a-entity>
-
-        <a-sky id="bg " color="#fff "></a-sky>
-
-        <a-plane src="#gndTexture " rotation="-90 0 0 " width="50 " height="50 "></a-plane>
-
-        <a-camera>
-            <a-cursor></a-cursor>
-        </a-camera>
-    </a-scene>
+  <a-scene background="color: #E31C1C">
+    <a-sphere position="-4 1 -5" scale=".5 .5 .5" radius="1.25" color="#32CD32" metalness="0" wireframe="false" animation="property: position; from:-4 -2 -5 ; to: -4 4 -5; loop: true; dur: 3000; dir: alternate; easing: easeInSine">
+    </a-sphere>
+    <a-torus-knot position="-2 1 -5" scale="0.5 0.5 0.5" p="5" radius="1.25" color="#229F6E" metalness="0" wireframe="false" animation="property: segments-tubular; from:30 ; to: 100; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-torus-knot>
+    <a-sphere position="0 1 -5" scale=".5 .5 .5" radius="1.25" color="#D41252" metalness=".5"
+      wireframe="false" segments-height="4" segments-height="4" animation="property: color; from:#C70000 ; to: #1C55C6; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-sphere>
+    
+      <a-sphere position="2 1 -5" scale=".5 .5 .5" radius="1.25" color="#1C55C6" metalness=".75" wireframe="false" segments-height="6" segments-height="6" animation="property: radius; from:1 ; to: 3; loop: true; dur: 3000; dir: alternate; easing: easeInSine">  
+      </a-sphere>
+    
+    <a-sphere position="4 1 -5" scale=".5 .5 .5" radius="1.25" color="#1C55C6" metalness="1" wireframe="true"
+      segments-height="8" animation="property: segments-height; from:2 ; to: 24; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-sphere>
+  </a-scene>
 </body>
 
 </html>
